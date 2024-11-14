@@ -1,3 +1,18 @@
+# My Hyperleaf Configuration
+
+This repository is my configuration of the toolkit, to create a working overleaf instance with persistent latex packages and fixes.
+
+At the moment, to get this running you have to do the following steps:
+
+1. Start instance with "bin/init" and "bin/up"
+2. Use "docker cp /usr/local/texlive <absolute_path>/data/texlive" to get the current texlive status
+3. Log into the container using bin/shell
+4. Run tlmgr install scheme-full
+5. Now you should be ready to use overleaf like below
+
+
+# Original README
+
 # Overleaf Toolkit
 
 This repository contains the Overleaf Toolkit, the standard tools for running a local
