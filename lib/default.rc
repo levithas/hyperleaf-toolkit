@@ -3,6 +3,7 @@
 PROJECT_NAME=overleaf
 SERVER_PRO=false
 OVERLEAF_DATA_PATH=data/sharelatex
+PACKAGES_DATA_PATH=data/texlive
 OVERLEAF_PORT=80
 
 # Sibling containers

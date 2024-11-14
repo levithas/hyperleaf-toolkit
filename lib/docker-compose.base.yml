@@ -1,12 +1,12 @@
 ---
 services:
-
     sharelatex:
         restart: always
-        image: "${IMAGE}"
+        build: .
         container_name: sharelatex
         volumes:
             - "${OVERLEAF_DATA_PATH}:${OVERLEAF_IN_CONTAINER_DATA_PATH}"
+            - "../data/texlive:/usr/local/texlive"
         ports:
             - "${OVERLEAF_LISTEN_IP:-127.0.0.1}:${OVERLEAF_PORT:-80}:80"
         environment:
