@@ -5,10 +5,13 @@ This repository is my configuration of the toolkit, to create a working overleaf
 At the moment, to get this running you have to do the following steps:
 
 1. Start instance with "bin/init" and "bin/up"
-2. Use "docker cp /usr/local/texlive <absolute_path>/data/texlive" to get the current texlive status
-3. Log into the container using bin/shell
-4. Run tlmgr install scheme-full
-5. Now you should be ready to use overleaf like below
+2. Use "docker cp /usr/local/texlive ./data/texlive" to get the current texlive status
+3. Stop the container
+4. Go into /lib/docker-compose-base.yml and remove the comment of the volume "../data/texlive:/usr/local/texlive"
+5. Start the container again (bin/up)
+6. Log into the container using bin/shell
+7. Run tlmgr install scheme-full
+8. Now you should be ready to use overleaf like below
 
 
 # Original README
